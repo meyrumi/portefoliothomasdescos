@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio universitaire</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Portfolio étudiant</p>
+      <h1>Thomas DESCOS</h1>
+      <p>Étudiant en formation Métiers du Multimédias et de l'Internet à Arles, dans l'académie d'Aix-Marseille.</p>
+      <a href="#projets" class="button">Découvrir mes projets</a>
+    </div>
+    <div class="hero-decor"></div>
+  </header>
+  <main>
+    <section id="apropos" class="section about">
+      <div class="container">
+        <h2>À propos de moi</h2>
+        <p>Étudiant en MMI (Métiers du Multimédia et de l'Internet), je me spécialise dans le développement web et le design graphique. Avec une passion pour les projets créatifs, j'ai réalisé divers travaux allant de la création d'affiches promotionnelles à la réalisation de vidéos et de sites web interactifs.</p>
+        <div class="stats">
+          <div>
+            <strong>+10</strong>
+            <span>Application montage vidéo, photo, et autres que j'utilise</span>
+          </div>
+          <div>
+            <strong>5</strong>
+            <span>Langages de programmations maîtrisés</span>
+          </div>
+          <div>
+            <strong>100%</strong>
+            <span>Passion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projets" class="section projects">
+      <div class="container">
+        <h2>Projets</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Affiche pour le collège</h3>
+            <p>Voici une affiche que mon ancien collège m’a demandé de faire pour promouvoir la semaine des langues dans le collège. Actuellement l’affiche se trouve sur le site du collège.</p>
+            <a href="img/affichecollege.png" target="_blank" class="button">Voir l’affiche</a>
+          </article>
+          <article class="card">
+            <h3>Film de terminale</h3>
+            <p>Ici se trouve un film que moi et 5 autres personnes avons réalisé dans le cadre de la spécialité Cinéma-Audiovisuel en classe de terminale. Je me suis occupé de la réalisation, du script et du montage en entier.</p>
+            <a href="https://youtu.be/QqYcOwtr2Is" target="_blank" class="button">Voir le film</a>
+          </article>
+          <article class="card">
+            <h3>Site web Pokémon</h3>
+            <p>En projet de groupe à l’université, j’ai codé un site web Pokémon pour présenter des informations et des parcours interactifs.</p>
+            <button type="button" class="bouton-indisponible" aria-haspopup="dialog" aria-controls="fenetre-indisponible">Indisponible <span class="icone-info" aria-hidden="true">i</span></button>
+          </article>
+          <article class="card">
+            <h3>Ciné Films'Info</h3>
+            <p>Un autre projet de groupe à l'université où nous devions coder un site web de référencement de films.</p>
+            <button type="button" class="bouton-indisponible" aria-haspopup="dialog" aria-controls="fenetre-indisponible">Indisponible <span class="icone-info" aria-hidden="true">i</span></button>
+          </article>
+          <article class="card">
+            <h3>Ma chaîne YouTube</h3>
+            <p>Voici ma chaîne YouTube où j’ai publié quelques vidéos il y a quelques années. C’est un espace où j’explore des idées créatives et des réalisations personnelles.</p>
+            <a href="https://www.youtube.com/@meyrumiii/videos" target="_blank" class="button">Visiter la chaîne</a>
+          </article>
+          <article class="card">
+            <h3>Guide de rentrée scolaire</h3>
+            <p>Pour un projet en production graphique, j’ai réalisé un guide de rentrée scolaire destiné aux élèves de 6ème pour les aider à bien démarrer l’année.</p>
+            <a href="Include/descos.pdf" target="_blank" class="button">Voir le guide</a>
+          </article>
+          <article class="card">
+            <h3>Traduction d’anime VOSTFR</h3>
+            <p>J’ai fait partie d’une équipe de traduction d’anime en sous-titres VOSTFR. J’ai sous-titré quelques épisodes, accessibles ici.</p>
+            <button type="button" class="button choix-episodes" aria-haspopup="dialog" aria-controls="fenetre-episodes">Choisir un épisode</button>
+          </article>
+          <article class="card">
+            <h3>Montage bande-annonce documentaire</h3>
+            <p>J’ai réalisé le montage d’une bande-annonce pour une interview documentaire sur le Stade de Vitrolle.</p>
+            <a href="https://youtu.be/CJdPYlMrM84" target="_blank" class="button">Voir la bande-annonce</a>
+          </article>
+          <article class="card">
+            <h3>Affiche relations humaines</h3>
+            <p>Sur un projet sur les relations humaines, j’ai créé une affiche illustrant ces dernières à travers les jeux vidéos.</p>
+            <a href="Include/afficherelation.png" target="_blank" class="button">Voir l’affiche</a>
+          </article>
+          <article class="card">
+            <h3>CV vidéo</h3>
+            <p>Mon CV vidéo présentant mon profil, mes compétences et mes expériences professionnelles.</p>
+            <a href="https://youtu.be/6aH_HG9uHHE" target="_blank" class="button">Voir mon CV</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email : thomasdescos1410@gmail.com<br>Téléphone : 06 28 98 24 48</p>
+        <a href="mailto:thomasdescos1410@gmail.com" class="button outline">Me contacter par mail</a>
+      </div>
+    </section>
+  </main>
+  <dialog id="fenetre-episodes" class="fenetre-episodes" aria-labelledby="titre-episodes">
+    <h2 id="titre-episodes">Choisir un épisode</h2>
+    <div class="liste-episodes">
+      <a href="episode.html?episode=1" target="_blank">Épisode 1</a>
+      <a href="episode.html?episode=2" target="_blank">Épisode 2</a>
+      <a href="episode.html?episode=3" target="_blank">Épisode 3</a>
+      <a href="episode.html?episode=4" target="_blank">Épisode 4</a>
+      <a href="episode.html?episode=5" target="_blank">Épisode 5</a>
+      <a href="episode.html?episode=6" target="_blank">Épisode 6</a>
+      <a href="episode.html?episode=7" target="_blank">Épisode 7</a>
+      <a href="episode.html?episode=8" target="_blank">Épisode 8</a>
+      <a href="episode.html?episode=9" target="_blank">Épisode 9</a>
+      <a href="episode.html?episode=10" target="_blank">Épisode 10</a>
+    </div>
+    <button type="button" class="button fermer-episodes">Fermer</button>
+  </dialog>
+  <dialog id="fenetre-indisponible" class="fenetre-indisponible" aria-labelledby="message-indisponible">
+    <p id="message-indisponible">Site hébergeur indisponible.</p>
+    <button type="button" class="button fermer-fenetre">Fermer</button>
+  </dialog>
+  <footer>
+    <p>Portfolio - Thomas DESCOS</p>
+  </footer>
+  <script>
+    const fenetreEpisodes = document.querySelector("#fenetre-episodes");
+    document.querySelector(".choix-episodes").addEventListener("click", () => fenetreEpisodes.showModal());
+    fenetreEpisodes.querySelector(".fermer-episodes").addEventListener("click", () => fenetreEpisodes.close());
+    fenetreEpisodes.addEventListener("click", (event) => {
+      if (event.target === fenetreEpisodes) fenetreEpisodes.close();
+    });
+    const fenetreIndisponible = document.querySelector("#fenetre-indisponible");
+    document.querySelectorAll(".bouton-indisponible").forEach((button) => {
+      button.addEventListener("click", () => fenetreIndisponible.showModal());
+    });
+    fenetreIndisponible.querySelector(".fermer-fenetre").addEventListener("click", () => {
+      fenetreIndisponible.close();
+    });
+    fenetreIndisponible.addEventListener("click", (event) => {
+      if (event.target === fenetreIndisponible) fenetreIndisponible.close();
+    });
+  </script>
+</body>
+</html>

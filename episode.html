@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texte de l’épisode - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-episode">
+    <header class="entete-episode">
+      <h1 id="titre-episode">Texte de l’épisode</h1>
+      <a href="index.html#projets" class="button">Retour au portfolio</a>
+    </header>
+    <p id="etat-episode" class="etat-episode" role="status" aria-live="polite">Chargement du fichier…</p>
+    <pre id="texte-episode" class="texte-episode" hidden></pre>
+  </main>
+  <script>
+    const numeroEpisode = new URLSearchParams(window.location.search).get("episode");
+    const titreEpisode = document.querySelector("#titre-episode");
+    const etatEpisode = document.querySelector("#etat-episode");
+    const texteEpisode = document.querySelector("#texte-episode");
+
+    if (!/^(?:[1-9]|10)$/.test(numeroEpisode || "")) {
+      etatEpisode.textContent = "Le numéro de l’épisode est invalide.";
+    } else {
+      titreEpisode.textContent = `Texte de l’épisode ${numeroEpisode}`;
+      fetch(`Include/${numeroEpisode}.ass`)
+        .then((reponse) => {
+          if (!reponse.ok) {
+            throw new Error(`Erreur HTTP ${reponse.status}`);
+          }
+          return reponse.text();
+        })
+        .then((contenu) => {
+          texteEpisode.textContent = contenu;
+          texteEpisode.hidden = false;
+          etatEpisode.hidden = true;
+        })
+        .catch((erreur) => {
+          console.error("Impossible de charger le fichier de sous-titres :", erreur);
+          etatEpisode.textContent = "Impossible de charger le texte de cet épisode. Réessayez plus tard.";
+        });
+    }
+  </script>
+</body>
+</html>
